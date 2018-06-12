@@ -21,6 +21,7 @@ a {
   margin: 35px auto;
   padding: 10px;
   border: 1px solid rgba(0,0,0,.29);
+  border-radius: 3px;
   cursor: pointer;
   background: #fff;
   font-size: 16px;
@@ -58,14 +59,35 @@ a {
   padding-left: 0;
 }
 
+.nav li:last-child {
+  float: right;
+  right: 0;
+  position: absolute;
+}
+
 ul {
   padding-left: 0;
+  align-items: center;
 }
 
 li {
   list-style-type: none;
   padding: 10px;
   text-decoration: none;
+}
+
+.nav-user {
+  float: right;
+  display: flex;
+  align-items: center;
+}
+
+.nav-avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  margin: 5px;
+  margin-left: 10px;
 }
 
 .avatar {
@@ -83,7 +105,7 @@ li {
   flex-flow: row wrap;
   margin: 0 auto;
   border: 1px solid #dad7d7;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .login-box > span,
