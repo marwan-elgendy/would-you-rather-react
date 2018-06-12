@@ -6,11 +6,34 @@ class Dashboard extends Component {
     showAnswered: false,
   }
 
+  handleFilterClicked = function(answered) {
+    this.setState(function() {
+      return {
+        showAnswered: answered
+      };
+    });
+  }
+
   render() {
     const { showAnswered } = this.state
+
     return (
       <div>
         Dashboard
+        <div className='btn-group'>
+          <button
+            className={!showAnswered ? 'active' : ''}
+            onClick={(event) => this.handleFilterClicked(false)}
+          >
+            Unanswered
+          </button>
+          <button
+            className={showAnswered ? 'active' : ''}
+            onClick={(event) => this.handleFilterClicked(true)}
+          >
+            Answered
+          </button>
+        </div>
       </div>
     );
   }
