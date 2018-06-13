@@ -19,20 +19,22 @@ class Dashboard extends Component {
 
     return (
       <div>
-        Dashboard
+        <h3 className='center'>Dashboard</h3>
         <div className='btn-group'>
           <button
-            className={!showAnswered ? 'active' : ''}
+            className={!showAnswered ? 'btn-lft active' : 'btn-lft'}
             onClick={(event) => this.handleFilterClicked(false)}
           >
             Unanswered
           </button>
           <button
-            className={showAnswered ? 'active' : ''}
+            className={showAnswered ? 'btn-rght active' : 'btn-rght'}
             onClick={(event) => this.handleFilterClicked(true)}
           >
             Answered
           </button>
+
+
         </div>
       </div>
     );
