@@ -25,7 +25,8 @@ class Dashboard extends Component {
         question.optionTwo.votes.indexOf(authedUser) > -1
       );
       return showAnswered ? contains : !contains;
-    })
+    });
+    const sortedQuestions = filteredQuestions.sort((a, b) => b.timestamp - a.timestamp);
 
     return (
       <div>
@@ -45,7 +46,7 @@ class Dashboard extends Component {
           </button>
         </div>
         <ul className='question-list'>
-          {filteredQuestions.map((question) => (
+          {sortedQuestions.map((question) => (
             <li key={question.id} className='question'>
               <Question question={question} />
             </li>
