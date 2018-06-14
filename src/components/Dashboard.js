@@ -15,10 +15,6 @@ class Dashboard extends Component {
     });
   }
 
-  handleOptionClicked = function(option) {
-
-  }
-
   render() {
     const { showAnswered } = this.state;
     const { authedUser, questions, users } = this.props;
