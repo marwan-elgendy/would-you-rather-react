@@ -17,7 +17,7 @@ class Dashboard extends Component {
 
   render() {
     const { showAnswered } = this.state;
-    const { authedUser, questions, users } = this.props;
+    const { authedUser, questions } = this.props;
     const questionsArray = Object.keys(questions).map((key) => questions[key]);
     const filteredQuestions = questionsArray.filter(function(question) {
       const contains = (
