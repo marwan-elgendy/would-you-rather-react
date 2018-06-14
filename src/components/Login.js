@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setAuthedUser, clearAuthedUser } from '../actions/authedUser';
 
@@ -41,11 +41,16 @@ class Login extends Component {
   render() {
     // const { userId, toHome } = this.state
     const { userId, toHome } = this.state;
-    const { users } = this.props;
+    const { history, users } = this.props;
     const selected = userId ? userId : -1;
     const avatar = userId ? users[userId].avatarURL : 'placeholder.jpg';
 
+
     if(toHome) {
+      const redirect = history.location.state;
+      if (redirect != null) {
+        return <Redirect to={redirect} push={true} />
+      }
       return <Redirect to='/' />
     }
 
@@ -88,6 +93,6 @@ function mapStateToProps({ users }) {
   };
 }
 
-export default connect(mapStateToProps)(Login)
+export default withRouter(connect(mapStateToProps)(Login))
 
 

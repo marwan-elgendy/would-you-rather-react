@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { answerQuestion } from '../actions/questions';
 
@@ -21,9 +22,9 @@ class Question extends Component {
     const percentVotesOptionTwo = (votesOptionTwo / votesTotal).toFixed(2) * 100;
 
     return (
-      <div>
+      <Link to={`/questions/${question.id}`}>
         <img
-          src={users[question.author].avatarURL}
+          src={`/${users[question.author].avatarURL}`}
           alt={`Avatar of ${question.author}`}
           className='avatar'
         />
@@ -60,7 +61,7 @@ class Question extends Component {
             Votes: {question.optionTwo.votes.length} ({percentVotesOptionTwo}%)
           </span>
         </div>}
-      </div>
+      </Link>
     );
   }
 }

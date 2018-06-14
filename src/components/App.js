@@ -7,6 +7,7 @@ import Leaderboard from './Leaderboard';
 import Login from './Login';
 import Nav from './Nav';
 import NewQuestion from './NewQuestion';
+import NotFound from './NotFound';
 import QuestionPage from './QuestionPage';
 import ProtectedRoute from '../utils/ProtectedRoute';
 
@@ -24,10 +25,11 @@ class App extends Component {
             <Nav />
               <div>
                 <Route path='/login' exact component={Login} />
+                <Route path='/not-found' exact component={NotFound} />
                 <ProtectedRoute path='/' exact component={Dashboard} loggedIn={loggedIn} />
                 <ProtectedRoute path='/leaderboard' exact component={Leaderboard} loggedIn={loggedIn} />
-                <ProtectedRoute path='/questions/:id' exact component={QuestionPage} loggedIn={loggedIn} />
                 <ProtectedRoute path='/add' exact component={NewQuestion} loggedIn={loggedIn} />
+                <ProtectedRoute path='/questions/:id' exact component={QuestionPage} loggedIn={loggedIn} />
               </div>
           </div>
         </Fragment>
