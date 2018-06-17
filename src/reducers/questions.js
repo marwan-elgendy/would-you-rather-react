@@ -3,7 +3,11 @@ import { ADD_QUESTION, RECEIVE_QUESTIONS, ANSWER_QUESTION } from '../actions/que
 export default function questions(state = {}, action) {
   switch (action.type) {
     case ADD_QUESTION:
+      const { question } = action;
+
       return {
+        ...state,
+        [question.id]: question,
       };
     case RECEIVE_QUESTIONS:
       return {
@@ -11,7 +15,6 @@ export default function questions(state = {}, action) {
         ...action.questions,
       };
     case ANSWER_QUESTION:
-      // this is a part of on optimistic UI action
       return {
         ...state,
         [action.qid]: {

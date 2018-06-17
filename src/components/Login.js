@@ -26,7 +26,7 @@ class Login extends Component {
 
     dispatch(setAuthedUser(userId));
 
-    this.setState(function(previousState){
+    this.setState(function(previousState) {
       return {
         ...previousState,
         toHome: true,

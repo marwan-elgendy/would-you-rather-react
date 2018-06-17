@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { answerQuestion } from '../actions/questions';
 
 class Question extends Component {
-
   handleOptionClicked = function(option) {
     const { authedUser, question, dispatch } = this.props;
     const answer = option === 1 ? 'optionOne' : 'optionTwo';
@@ -28,7 +27,7 @@ class Question extends Component {
           alt={`Avatar of ${question.author}`}
           className='avatar'
         />
-        <span>Would you rather ...</span>
+        <span>Would You Rather...</span>
         <div className='option'>
           <button
             className={
