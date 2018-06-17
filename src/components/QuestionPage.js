@@ -15,9 +15,7 @@ function QuestionPage(props) {
     <div>
       <h3 className='center'>Question</h3>
       {question &&
-        <div className='question'>
-          <Question question={question} />
-        </div>
+        <Question question={question} />
       }
     </div>
   );
