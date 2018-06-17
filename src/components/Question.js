@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { answerQuestion } from '../actions/questions';
+import * as actions from '../actions/questions';
 
 class Question extends Component {
   handleOptionClicked = function(option) {
-    const { authedUser, question, dispatch } = this.props;
+    console.log(this.props)
+    const { answerQuestion, authedUser, question } = this.props;
     const answer = option === 1 ? 'optionOne' : 'optionTwo';
-    dispatch(answerQuestion(authedUser, question.id, answer));
+    answerQuestion(authedUser, question.id, answer);
   }
 
   render() {
@@ -68,10 +69,11 @@ class Question extends Component {
 }
 
 function mapStateToProps({ authedUser, users }) {
+  console.log(actions)
   return {
     authedUser,
     users,
   };
 }
 
-export default connect(mapStateToProps)(Question)
+export default connect(mapStateToProps, actions)(Question);
