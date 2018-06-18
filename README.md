@@ -1,4 +1,4 @@
-# React MyReads
+# React & Redux - Would You Rather
 
 This is React application is an assignment to the second project in Udacity's React Nanodegree - React & Redux
 
