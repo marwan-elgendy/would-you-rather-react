@@ -40,4 +40,4 @@ As mentioned in the code review from Udacity's staff memebrs, here is a list of 
 * moving action constants into separate file: Here’s a fantastic article explaining why this is important: https://stackoverflow.com/questions/34965856/what-is-the-point-of-the-constants-in-redux
 * blog article on improving react-redux applicaton scalability: https://medium.com/@alexmngn/how-to-use-redux-on-highly-scalable-javascript-applications-4e4b8cb5ef38
 * article about react lifecycle methods: http://busypeoples.github.io/post/react-component-lifecycle/
-
+* article on testing react applications with jest: https://auth0.com/blog/testing-react-applications-with-jest/
