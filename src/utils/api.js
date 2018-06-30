@@ -1,3 +1,4 @@
+// @flow
 import {
   _getUsers,
   _getQuestions,
