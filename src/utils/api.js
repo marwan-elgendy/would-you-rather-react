@@ -18,10 +18,10 @@ export function getInitialData() {
   });
 };
 
-export function saveQuestion(info) {
+export function saveQuestion(info: string) {
   return _saveQuestion(info);
 };
 
-export function saveQuestionAnswer(info) {
+export function saveQuestionAnswer(info: string) {
   return _saveQuestionAnswer(info);
 }
