@@ -1,3 +1,4 @@
+/* @flow */
 import { saveQuestion, saveQuestionAnswer } from '../utils/api'
 
 export const ADD_QUESTION = 'ADD_QUESTION';
@@ -10,6 +11,13 @@ export function addQuestion(question) {
     question,
   };
 }
+
+// @flow
+function square(n: number): number {
+  return n * n;
+}
+
+square("2")
 
 export function handleAddQuestion(optionOneText, optionTwoText) {
   return function(dispatch, getState) {
