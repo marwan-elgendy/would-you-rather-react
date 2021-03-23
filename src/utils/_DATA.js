@@ -33,10 +33,10 @@ let users = {
     },
     questions: ['6ni6ok3ym7mf1p33lnez', 'xj352vofupe1dqz9emx13r'],
   },
-  artpropp: {
-    id: 'artpropp',
-    name: 'Artur Propp',
-    avatarURL: 'artpropp.jpg',
+  marwan: {
+    id: 'marwan',
+    name: 'Marwan Elgendy',
+    avatarURL: 'marwan.jpg',
     answers: {
     },
     questions: [],
